@@ -1,0 +1,30 @@
+name: "Test compiling Swift Modelgen output"
+
+on:
+  push:
+    branches:
+      - test-swift-e2e
+
+jobs:
+  Build-Swift-Modelgen:
+    name: Analyze
+    runs-on: macos-13-xl
+    permissions:
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Xcode
+        uses: actions/setup-xcode@v3
+        with:
+          xcode-version: '12.4'
+
+      - name: Build and test
+        run: xcodebuild --version
+        

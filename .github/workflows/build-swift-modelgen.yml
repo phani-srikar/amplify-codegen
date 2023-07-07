@@ -47,7 +47,7 @@ jobs:
           import Amplify
           import Foundation
 
-          public struct Todo: Model {
+          public stru Todo: Model {
             public let id: String
             public var name: String
             public var description: String?

@@ -32,9 +32,6 @@ jobs:
       - name: Check current dir
         run: pwd
 
-      - name: Setup SSH session
-        uses: mxschmitt/action-tmate@v3
-  
       - name: Create Swift app
         run: |
           mkdir swiftapp && cd swiftapp

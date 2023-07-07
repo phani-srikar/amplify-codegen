@@ -32,6 +32,16 @@ jobs:
       - name: Enable SSH session
         uses: lhotari/action-upterm@v1
         
-      - name: Check swift version again
-        run: swift --version
+      - name: Check current dir
+        run: pwd
+      
+      - name: Create Swift app
+        run: |
+          mkdir swiftapp && cd swiftapp
+          swift package init --type executable
+          rm -rf Package.swift
+          echo "import PackageDescription\nlet package = Package(\n    name: \"swiftapp\",\n    dependencies: [\n        .package(url: \"https://github.com/aws-amplify/amplify-swift\", from: \"2.12.0\")\n    ],\n    targets: [\n        .executableTarget(\n            name: \"swiftapp\",\n            dependencies: [\n                .product(name: \"Amplify\", package: \"amplify-swift\")\n            ],\n            path: \"Sources\"\n        )\n    ]\n)" >> Package.swift
+          cat Package.swift
+          swift package resolve
+          swift build && swift run
         

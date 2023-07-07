@@ -36,8 +36,9 @@ jobs:
         run: |
           mkdir swiftapp && cd swiftapp
           swift package init --type executable
+          cat Package.swift
           rm -rf Package.swift
-          echo "// swift-tools-version: 5.7.1 \n\nimport PackageDescription\nlet package = Package(\n    name: \"swiftapp\",\n    dependencies: [\n        .package(url: \"https://github.com/aws-amplify/amplify-swift\", from: \"2.12.0\")\n    ],\n    targets: [\n        .executableTarget(\n            name: \"swiftapp\",\n            dependencies: [\n                .product(name: \"Amplify\", package: \"amplify-swift\")\n            ],\n            path: \"Sources\"\n        )\n    ]\n)" >> Package.swift
+          echo '// swift-tools-version: 5.7.1 \n\nimport PackageDescription\nlet package = Package(\n    name: \"swiftapp\",\n    dependencies: [\n        .package(url: \"https://github.com/aws-amplify/amplify-swift\", from: \"2.12.0\")\n    ],\n    targets: [\n        .executableTarget(\n            name: \"swiftapp\",\n            dependencies: [\n                .product(name: \"Amplify\", package: \"amplify-swift\")\n            ],\n            path: \"Sources\"\n        )\n    ]\n)' >> Package.swift
           cat Package.swift
           swift package resolve
           swift build && swift run

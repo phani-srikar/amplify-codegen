@@ -20,10 +20,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Xcode
-        uses: actions/setup-xcode@v3
-        with:
-          xcode-version: '12.4'
+      - name: Check Xcode Select
+        run: xcode-select --version
 
       - name: Build and test
         run: xcodebuild --version

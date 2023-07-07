@@ -31,7 +31,12 @@ jobs:
       
       - name: Check current dir
         run: pwd
-      
+
+      - name: Setup SSH session
+        uses: mxschmitt/action-tmate@v3
+        with:
+          detached: true
+  
       - name: Create Swift app
         run: |
           mkdir swiftapp && cd swiftapp
@@ -45,9 +50,4 @@ jobs:
           cat Package.swift
           swift package resolve
           swift build && swift run
-        
-      - name: Enable SSH session
-        uses: lhotari/action-upterm@v1
-        with:
-           limit-access-to-actor: false
         

@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.0.0-test-cb-local.0 (2023-07-07)
+
+### Bug Fixes
+
+- codegen downgrade to version 3 ([#589](https://github.com/aws-amplify/amplify-codegen/issues/589)) ([c1f9f36](https://github.com/aws-amplify/amplify-codegen/commit/c1f9f36979691dfba3dd3db1c4a516aeeb29c41e)), closes [#575](https://github.com/aws-amplify/amplify-codegen/issues/575)
+- consume updated docgen API ([4b87292](https://github.com/aws-amplify/amplify-codegen/commit/4b87292963a223eaed569820ad1822ff94b99708))
+- **docsgen:** update args in cli.ts ([e8a0054](https://github.com/aws-amplify/amplify-codegen/commit/e8a00540bad13e0e359993da2b556dab774f5a95))
+- **docsgen:** update to use FeatureFlag retainCaseStyle ([5b100f4](https://github.com/aws-amplify/amplify-codegen/commit/5b100f406e245388fe2d219ea809cbaa8b3c4c7c))
+- **graphql-docs-generator:** change handler dependency version ([#164](https://github.com/aws-amplify/amplify-codegen/issues/164)) ([f7de414](https://github.com/aws-amplify/amplify-codegen/commit/f7de41409aa610c1b013830e977c12ef33711ec5))
+- **graphql:** aggregate-code-fix ([4001257](https://github.com/aws-amplify/amplify-codegen/commit/40012575167a8fbdedff08fc3d48e47541b39cdd))
+- **graphql:** allow aws_lambda directive ([03ef563](https://github.com/aws-amplify/amplify-codegen/commit/03ef5637488e9514116e83f691656fddae7628b2))
+- handle generate without options ([0d73f47](https://github.com/aws-amplify/amplify-codegen/commit/0d73f47145a16899b3803cc54ab472f68a71d334))
+- move prettier dependecy to codegen plugin ([f07c851](https://github.com/aws-amplify/amplify-codegen/commit/f07c85123d15b5e8aca31045421fc04b65bc9d44))
+- **patch-release:** override previous patch release ([f2fe6e7](https://github.com/aws-amplify/amplify-codegen/commit/f2fe6e7bc3afa9a5fc634292564b9a97bf6bbc04))
+- **release-docs-generator:** set package access to public ([55bb623](https://github.com/aws-amplify/amplify-codegen/commit/55bb62374c21a36d8e07803763504e338e7cc82f))
+- update API name and snapshots ([a117447](https://github.com/aws-amplify/amplify-codegen/commit/a11744717e9ccc0d7cac9020cdb4163ec4406081))
+- update docs generator tests ([dbc0988](https://github.com/aws-amplify/amplify-codegen/commit/dbc0988f1035a6ac2b178e532ce3c1cb60381bbb))
+
+### chore
+
+- mv bump associated with revert to caret-versioning in CLI ([#412](https://github.com/aws-amplify/amplify-codegen/issues/412)) ([8f00f73](https://github.com/aws-amplify/amplify-codegen/commit/8f00f73a561aebea18009104e95096cc626e7a65))
+
+### Features
+
+- add \_\_typename to selection set ([#575](https://github.com/aws-amplify/amplify-codegen/issues/575)) ([066615e](https://github.com/aws-amplify/amplify-codegen/commit/066615e97c54e9f62b599991e058fc0d70aa22b4))
+- **docs-generator-migration:** rename package to @aws-amplify/graphql-docs-generator ([9b9c7f3](https://github.com/aws-amplify/amplify-codegen/commit/9b9c7f3b8a717060130ce3450a2ea54bcb1948cb))
+- generate searchable aggregateItems 2 additional levels ([#268](https://github.com/aws-amplify/amplify-codegen/issues/268)) ([a54db9f](https://github.com/aws-amplify/amplify-codegen/commit/a54db9f6a15e91e16c004bf142d504d2780597ad))
+- **graphql-docs-generator:** remove dependencies on fs and path ([8fe6a4a](https://github.com/aws-amplify/amplify-codegen/commit/8fe6a4a5cf3bc4fdacdd11ad2fdac34adeda1c29))
+- major version bump ([5b62f74](https://github.com/aws-amplify/amplify-codegen/commit/5b62f74fd53762cd85f724a252915607d3224f31))
+- use brower compatible formatter ([228dae9](https://github.com/aws-amplify/amplify-codegen/commit/228dae9d1e94dcdbfe9720808a6abaa14e2c53e3))
+
+### BREAKING CHANGES
+
+- do a major version bump
+- typename introspection with \_\_typename meta field enabled by default
+- no-op to bump major-version
+
 ## [4.0.3](https://github.com/aws-amplify/amplify-codegen/compare/@aws-amplify/graphql-docs-generator@4.0.2...@aws-amplify/graphql-docs-generator@4.0.3) (2023-06-29)
 
 **Note:** Version bump only for package @aws-amplify/graphql-docs-generator

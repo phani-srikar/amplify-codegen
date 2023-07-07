@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.5.0-test-cb-local.0 (2023-07-07)
+
+### Bug Fixes
+
+- **amplify-codegen-e2e-core:** API walkthrough changes ([1f125ac](https://github.com/aws-amplify/amplify-codegen/commit/1f125ac4bf3ba64d6f374221c417e7e6e40f6898))
+- **amplify-codegen-e2e-core:** minor add api walkthrough fix ([cee10f9](https://github.com/aws-amplify/amplify-codegen/commit/cee10f968dec6b7a155682b750464195f1281faf))
+- **amplify-codegen-e2e-core:** remove pull status table checks ([e70a079](https://github.com/aws-amplify/amplify-codegen/commit/e70a079fecf3baf058c8e86327e743660d80b439))
+- **amplify-codegen-e2e-tests:** modelgen test fixes ([0a95ec8](https://github.com/aws-amplify/amplify-codegen/commit/0a95ec88c0df0bd801c3c742c3315323c7b0bb8c))
+- bump cli versions ([43a4b01](https://github.com/aws-amplify/amplify-codegen/commit/43a4b0153c659a65c08f0e909e7dcd4dd11b37c7))
+- E2e testing ([#206](https://github.com/aws-amplify/amplify-codegen/issues/206)) ([bc13041](https://github.com/aws-amplify/amplify-codegen/commit/bc130412e3b65c9c44a17360d933f2b50f5e9974))
+- E2e testing ([#550](https://github.com/aws-amplify/amplify-codegen/issues/550)) ([cbddf45](https://github.com/aws-amplify/amplify-codegen/commit/cbddf45181bc1c7fc269b034604c36ca0ff34eb9))
+- e2e testing ([#554](https://github.com/aws-amplify/amplify-codegen/issues/554)) ([c9a5c3b](https://github.com/aws-amplify/amplify-codegen/commit/c9a5c3b1b6032a461f35faa860fbb579cd2d23aa))
+- **e2e:** api add walkthrough question ([#305](https://github.com/aws-amplify/amplify-codegen/issues/305)) ([d1e4fe3](https://github.com/aws-amplify/amplify-codegen/commit/d1e4fe33f27196ddbd69fe06bab1a4c0cf6e6900))
+- **e2e:** build error ([6d31ac5](https://github.com/aws-amplify/amplify-codegen/commit/6d31ac57acb28ec1706de48c8206cfc39cbe5e0d))
+- **e2e:** fix export regions ([#244](https://github.com/aws-amplify/amplify-codegen/issues/244)) ([105d06b](https://github.com/aws-amplify/amplify-codegen/commit/105d06bc147d026a3d2fc1772002c00330d28f48))
+- **e2e:** update amplify configure region ([d717041](https://github.com/aws-amplify/amplify-codegen/commit/d71704122a62f584963663db89de932f06115af9))
+- **e2e:** use cli internal for e2e ([#444](https://github.com/aws-amplify/amplify-codegen/issues/444)) ([2d4e993](https://github.com/aws-amplify/amplify-codegen/commit/2d4e993bc399f3e89ae54b87af647502fb44b91f))
+- init step for e2e test ([6457501](https://github.com/aws-amplify/amplify-codegen/commit/6457501a10c19e881ac41c743e2afcd58c91d002))
+- repo dev dependencies of cli components ([#304](https://github.com/aws-amplify/amplify-codegen/issues/304)) ([e4a7456](https://github.com/aws-amplify/amplify-codegen/commit/e4a745660552b643adfedc91481e4f5798778edc))
+- updating occurrences of amplify publish in e2e-core as well ([d9e221d](https://github.com/aws-amplify/amplify-codegen/commit/d9e221d17ec53ea21513aa2e09eb45b4e5f66bc3))
+
+### Features
+
+- add E2e testing ([#169](https://github.com/aws-amplify/amplify-codegen/issues/169)) ([19e17df](https://github.com/aws-amplify/amplify-codegen/commit/19e17df3c04bf5c18341efa1a53a5ecf4a7cc42e)), closes [#151](https://github.com/aws-amplify/amplify-codegen/issues/151) [#156](https://github.com/aws-amplify/amplify-codegen/issues/156) [#157](https://github.com/aws-amplify/amplify-codegen/issues/157) [#163](https://github.com/aws-amplify/amplify-codegen/issues/163)
+- **amplify-codegen:** new codegen command of model intropection ([#476](https://github.com/aws-amplify/amplify-codegen/issues/476)) ([ab991c3](https://github.com/aws-amplify/amplify-codegen/commit/ab991c302eb4fad540422ba2099ac6a15176e2cb))
+
 ## [1.4.9](https://github.com/aws-amplify/amplify-codegen/compare/@aws-amplify/amplify-codegen-e2e-core@1.4.8...@aws-amplify/amplify-codegen-e2e-core@1.4.9) (2023-06-19)
 
 **Note:** Version bump only for package @aws-amplify/amplify-codegen-e2e-core

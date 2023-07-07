@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0-test-cb-local.0 (2023-07-07)
+
+### Bug Fixes
+
+- **graphql-types-generator:** add missing @types/fs-extra dependency ([649bc07](https://github.com/aws-amplify/amplify-codegen/commit/649bc07e47b46a236b94e604c50237f9c4225691))
+- **graphql-types-generator:** add wrapper for sub response in angular ([#209](https://github.com/aws-amplify/amplify-codegen/issues/209)) ([c025bd2](https://github.com/aws-amplify/amplify-codegen/commit/c025bd26fe2c14d56f15a9b8db8b1e4ebbe277d1))
+- **graphql-types-generator:** correct required types and inconsistent types ([#159](https://github.com/aws-amplify/amplify-codegen/issues/159)) ([2805bb6](https://github.com/aws-amplify/amplify-codegen/commit/2805bb6159298e0cb40ac629bc117c586af49e1f))
+- **graphql-types-generator:** correct scalar and enum type in angular ([#257](https://github.com/aws-amplify/amplify-codegen/issues/257)) ([8c78e97](https://github.com/aws-amplify/amplify-codegen/commit/8c78e9737af95febf1f4dfe83077068d8497744b))
+- **graphql-types-generator:** correct typename for nested fragments ([#262](https://github.com/aws-amplify/amplify-codegen/issues/262)) ([584dbcc](https://github.com/aws-amplify/amplify-codegen/commit/584dbccc585d6f6156e4e6a6a0cde3db60d015ff))
+- **graphql-types-generator:** indentation fixes ([f5ca0e4](https://github.com/aws-amplify/amplify-codegen/commit/f5ca0e440e6639345d40b15b605ea5a0a89e7c54))
+- **graphql:** allow aws_lambda directive ([03ef563](https://github.com/aws-amplify/amplify-codegen/commit/03ef5637488e9514116e83f691656fddae7628b2))
+- **patch-release:** override previous patch release ([f2fe6e7](https://github.com/aws-amplify/amplify-codegen/commit/f2fe6e7bc3afa9a5fc634292564b9a97bf6bbc04))
+
+### chore
+
+- mv bump associated with revert to caret-versioning in CLI ([#412](https://github.com/aws-amplify/amplify-codegen/issues/412)) ([8f00f73](https://github.com/aws-amplify/amplify-codegen/commit/8f00f73a561aebea18009104e95096cc626e7a65))
+
+### Features
+
+- add E2e testing ([#169](https://github.com/aws-amplify/amplify-codegen/issues/169)) ([19e17df](https://github.com/aws-amplify/amplify-codegen/commit/19e17df3c04bf5c18341efa1a53a5ecf4a7cc42e)), closes [#151](https://github.com/aws-amplify/amplify-codegen/issues/151) [#156](https://github.com/aws-amplify/amplify-codegen/issues/156) [#157](https://github.com/aws-amplify/amplify-codegen/issues/157) [#163](https://github.com/aws-amplify/amplify-codegen/issues/163)
+- **types-generator-migration:** rename package to @aws-amplify/graphql-types-generator ([9f11cfe](https://github.com/aws-amplify/amplify-codegen/commit/9f11cfe396bacc603df84233a1b75feabcadaae6))
+
+### BREAKING CHANGES
+
+- no-op to bump major-version
+
 ## [3.0.3](https://github.com/aws-amplify/amplify-codegen/compare/@aws-amplify/graphql-types-generator@3.0.2...@aws-amplify/graphql-types-generator@3.0.3) (2023-06-29)
 
 **Note:** Version bump only for package @aws-amplify/graphql-types-generator

@@ -3,6 +3,93 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.0.0-test-cb-local.0 (2023-07-07)
+
+### Bug Fixes
+
+- add amplify prompts in package.json ([#370](https://github.com/aws-amplify/amplify-codegen/issues/370)) ([c145691](https://github.com/aws-amplify/amplify-codegen/commit/c1456917b041d6ae86e803f311fab45e58a0c027))
+- add default for no gql config case ([b12a19a](https://github.com/aws-amplify/amplify-codegen/commit/b12a19a9233ca33437c246fc34c5f4e51af1e5de))
+- **amplify-codegen:** add amplify-codegen version to version metadata comment ([bb508e1](https://github.com/aws-amplify/amplify-codegen/commit/bb508e18377909e67990e7be2f1e27d9e2033442))
+- **amplify-codegen:** add correct error msg for flutter codegen ([#140](https://github.com/aws-amplify/amplify-codegen/issues/140)) ([a99d67c](https://github.com/aws-amplify/amplify-codegen/commit/a99d67c1053896cc62f9cfc1898fff3c992907da))
+- **amplify-codegen:** Correct cli help re: codegen `--maxDepth` flag ([#138](https://github.com/aws-amplify/amplify-codegen/issues/138)) ([960b900](https://github.com/aws-amplify/amplify-codegen/commit/960b900f1f7de5f232bfd96cf673de93fae1643c))
+- **amplify-codegen:** disable cleanGeneratedModels FF ([3b3ca86](https://github.com/aws-amplify/amplify-codegen/commit/3b3ca869bd57558793b86e0e3469a0362960fcd4))
+- **amplify-codegen:** have correct error msg for api meta not found ([#125](https://github.com/aws-amplify/amplify-codegen/issues/125)) ([2894f43](https://github.com/aws-amplify/amplify-codegen/commit/2894f43d8c5eaea9f04c05ed3508feb162115f60))
+- **amplify-codegen:** minor changes to use lambda functions ([06ba31a](https://github.com/aws-amplify/amplify-codegen/commit/06ba31ac41dc6ec2b92b913ec2a262580defda17))
+- **amplify-codegen:** minor linting fixes ([4c3d980](https://github.com/aws-amplify/amplify-codegen/commit/4c3d980b8d4edcb3714f11e3b6f45bcf4ee8447d))
+- **amplify-codegen:** move upstream CLI dependencies as peerDependencies ([83b0ce8](https://github.com/aws-amplify/amplify-codegen/commit/83b0ce87f517c5836fe0aae3b1e3ab590234f9b5))
+- **amplify-codegen:** moving the constant back ([1611ee8](https://github.com/aws-amplify/amplify-codegen/commit/1611ee8cc7a19b2beebfe08883fd91e0a935aa64))
+- **amplify-codegen:** print syntax error in a readable output ([#105](https://github.com/aws-amplify/amplify-codegen/issues/105)) ([3f87faa](https://github.com/aws-amplify/amplify-codegen/commit/3f87faa6995388ba2f22db0b986f2a6caadda49d))
+- **amplify-codegen:** re-arrange models cmd tests ([0c970d5](https://github.com/aws-amplify/amplify-codegen/commit/0c970d54538e42f1fc480bbb72aeaf143b92a6be))
+- **amplify-codegen:** refactor test setup into a common method ([825136d](https://github.com/aws-amplify/amplify-codegen/commit/825136de3799bce2accc9cc2a7414cdf9f6e7590))
+- **amplify-codegen:** remove commented test ([11cb697](https://github.com/aws-amplify/amplify-codegen/commit/11cb697a506eeb7d407ef61dfb7101cdfc8aca76))
+- **amplify-codegen:** remove references to mock variable ([56ef92d](https://github.com/aws-amplify/amplify-codegen/commit/56ef92d0a555d3a27e3803a1299d4300584b2874))
+- **amplify-codegen:** rename imported module mockFs ([0525dc5](https://github.com/aws-amplify/amplify-codegen/commit/0525dc5ff004dbf482052bc573c70e5e0f2b5553))
+- **amplify-codegen:** rename mock to mockFs ([b146457](https://github.com/aws-amplify/amplify-codegen/commit/b1464578269ec94b334e6c6123959549d51fd428))
+- **amplify-codegen:** rephrase the amplify version comment ([c46105e](https://github.com/aws-amplify/amplify-codegen/commit/c46105e9014aa7c3d5c553bbe6d52bce705b3a90))
+- **amplify-codegen:** use correct array type for includePattern ([ac0bc6d](https://github.com/aws-amplify/amplify-codegen/commit/ac0bc6de56b549fb5b3bc65fd5dd8b7978e451ee))
+- **amplify-codegen:** use feature flag instances inside a method and not top level ([695b7a6](https://github.com/aws-amplify/amplify-codegen/commit/695b7a646c91656d917e437b2e767d333f93a6df))
+- **appsync-modelgen-plugin:** restore the old init if timestamp disabled ([#177](https://github.com/aws-amplify/amplify-codegen/issues/177)) ([f923e14](https://github.com/aws-amplify/amplify-codegen/commit/f923e144e9cf51f904d792a5c01ceffca685d0ea))
+- **appsync-modelgen-plugin:** skip query/mutation/sub types ([#180](https://github.com/aws-amplify/amplify-codegen/issues/180)) ([aa0dbb3](https://github.com/aws-amplify/amplify-codegen/commit/aa0dbb31e9ebe285ec643ef98335021561dd2168))
+- bump cli versions ([43a4b01](https://github.com/aws-amplify/amplify-codegen/commit/43a4b0153c659a65c08f0e909e7dcd4dd11b37c7))
+- codegen downgrade to version 3 ([#589](https://github.com/aws-amplify/amplify-codegen/issues/589)) ([c1f9f36](https://github.com/aws-amplify/amplify-codegen/commit/c1f9f36979691dfba3dd3db1c4a516aeeb29c41e)), closes [#575](https://github.com/aws-amplify/amplify-codegen/issues/575)
+- consume updated docgen API ([4b87292](https://github.com/aws-amplify/amplify-codegen/commit/4b87292963a223eaed569820ad1822ff94b99708))
+- **docsgen:** change FF name to codegen.retainCaseStyle ([caee85f](https://github.com/aws-amplify/amplify-codegen/commit/caee85f4378f009cdf3bb8d2dec88e11659a637a))
+- **docsgen:** update to use FeatureFlag retainCaseStyle ([5b100f4](https://github.com/aws-amplify/amplify-codegen/commit/5b100f406e245388fe2d219ea809cbaa8b3c4c7c))
+- e2e testing ([#554](https://github.com/aws-amplify/amplify-codegen/issues/554)) ([c9a5c3b](https://github.com/aws-amplify/amplify-codegen/commit/c9a5c3b1b6032a461f35faa860fbb579cd2d23aa))
+- **graphql:** allow aws_lambda directive ([03ef563](https://github.com/aws-amplify/amplify-codegen/commit/03ef5637488e9514116e83f691656fddae7628b2))
+- init step for e2e test ([6457501](https://github.com/aws-amplify/amplify-codegen/commit/6457501a10c19e881ac41c743e2afcd58c91d002))
+- move prettier dependecy to codegen plugin ([f07c851](https://github.com/aws-amplify/amplify-codegen/commit/f07c85123d15b5e8aca31045421fc04b65bc9d44))
+- normalize path for windows ([8e3544d](https://github.com/aws-amplify/amplify-codegen/commit/8e3544de5e811eb5e8a9615ddeed2fa6b7fb2fe1))
+- remove unused lint rule for flow ([3fd05f5](https://github.com/aws-amplify/amplify-codegen/commit/3fd05f50542101ad13eeae15658c0db7ddac806f))
+- render lint overrides ([b125dd5](https://github.com/aws-amplify/amplify-codegen/commit/b125dd5b2479f312db82d94512650b95b30c2de9))
+- repo dev dependencies of cli components ([#304](https://github.com/aws-amplify/amplify-codegen/issues/304)) ([e4a7456](https://github.com/aws-amplify/amplify-codegen/commit/e4a745660552b643adfedc91481e4f5798778edc))
+- Revert "feat(amplify-codegen): Add Amplify CLI version as a comment for the Modelgen output files" ([#131](https://github.com/aws-amplify/amplify-codegen/issues/131)) ([b813657](https://github.com/aws-amplify/amplify-codegen/commit/b813657c0b7abce67cfe16fcd0f93389ba63120d))
+- rm amplify-prompts and use console log ([#373](https://github.com/aws-amplify/amplify-codegen/issues/373)) ([6255b8b](https://github.com/aws-amplify/amplify-codegen/commit/6255b8b3a69343a0fcae2e7098c342f9f9f861ee))
+- simplify outputDirParam handling ([#483](https://github.com/aws-amplify/amplify-codegen/issues/483)) ([e6f75ca](https://github.com/aws-amplify/amplify-codegen/commit/e6f75cae5521ddb7ceab0766765ba239a8ddb7f1))
+- support pre-release version tags for dart version check ([#477](https://github.com/aws-amplify/amplify-codegen/issues/477)) ([cf712a6](https://github.com/aws-amplify/amplify-codegen/commit/cf712a6f562ef89fd3e4eed80fb5ef1986a41ccf))
+- update API name and snapshots ([a117447](https://github.com/aws-amplify/amplify-codegen/commit/a11744717e9ccc0d7cac9020cdb4163ec4406081))
+- update no operations in input case to print warning ([c32b3f0](https://github.com/aws-amplify/amplify-codegen/commit/c32b3f06de08cba5a3b837237b3f62df326f48ab))
+- update top level codegen dependency ([fefaf63](https://github.com/aws-amplify/amplify-codegen/commit/fefaf6398833fe6553cfa9ad1aa920e21b090e0e))
+
+### chore
+
+- mv bump associated with revert to caret-versioning in CLI ([#412](https://github.com/aws-amplify/amplify-codegen/issues/412)) ([8f00f73](https://github.com/aws-amplify/amplify-codegen/commit/8f00f73a561aebea18009104e95096cc626e7a65))
+
+### Features
+
+- add \_\_typename to selection set ([#575](https://github.com/aws-amplify/amplify-codegen/issues/575)) ([066615e](https://github.com/aws-amplify/amplify-codegen/commit/066615e97c54e9f62b599991e058fc0d70aa22b4))
+- add codegen config related apis ([b82e3e4](https://github.com/aws-amplify/amplify-codegen/commit/b82e3e4cce0b649d4df8db5047e590a5fc780f68))
+- add E2e testing ([#169](https://github.com/aws-amplify/amplify-codegen/issues/169)) ([19e17df](https://github.com/aws-amplify/amplify-codegen/commit/19e17df3c04bf5c18341efa1a53a5ecf4a7cc42e)), closes [#151](https://github.com/aws-amplify/amplify-codegen/issues/151) [#156](https://github.com/aws-amplify/amplify-codegen/issues/156) [#157](https://github.com/aws-amplify/amplify-codegen/issues/157) [#163](https://github.com/aws-amplify/amplify-codegen/issues/163)
+- allow model-introspection to be invoked internally to the CLI ([#494](https://github.com/aws-amplify/amplify-codegen/issues/494)) ([b5efb9b](https://github.com/aws-amplify/amplify-codegen/commit/b5efb9b6e44d0ab23f56de94035a0262c5b50b93))
+- **amplify-codegen:** Add Amplify CLI version as a comment for the Modelgen output files ([3ee4728](https://github.com/aws-amplify/amplify-codegen/commit/3ee4728c485e5805cda385ae62edb5db3242cb2b))
+- **amplify-codegen:** change doc-gen default depth to 3 ([#261](https://github.com/aws-amplify/amplify-codegen/issues/261)) ([f9fb70f](https://github.com/aws-amplify/amplify-codegen/commit/f9fb70fc7908a79fc2f3ff74b54b4157cf9690ff))
+- **amplify-codegen:** iOS LazyReference and ModelPath ([#504](https://github.com/aws-amplify/amplify-codegen/issues/504)) ([6ff41e8](https://github.com/aws-amplify/amplify-codegen/commit/6ff41e84e51b1d3e170f4711dac5a5703bedd196))
+- **amplify-codegen:** new codegen command of model intropection ([#476](https://github.com/aws-amplify/amplify-codegen/issues/476)) ([ab991c3](https://github.com/aws-amplify/amplify-codegen/commit/ab991c302eb4fad540422ba2099ac6a15176e2cb))
+- **codegen:** iOS index directive support ([#174](https://github.com/aws-amplify/amplify-codegen/issues/174)) ([abb966c](https://github.com/aws-amplify/amplify-codegen/commit/abb966c647b08537564f85314a4266a5cbe33ffd))
+- lazy loading conditional type ([#489](https://github.com/aws-amplify/amplify-codegen/issues/489)) ([43d81af](https://github.com/aws-amplify/amplify-codegen/commit/43d81af60871f072c8aa13b110d61aaafa78e967))
+- major version bump ([5b62f74](https://github.com/aws-amplify/amplify-codegen/commit/5b62f74fd53762cd85f724a252915607d3224f31))
+- **modelgen:** add timestamp fields createdAt & updatedAt for [@model](https://github.com/model) ([#114](https://github.com/aws-amplify/amplify-codegen/issues/114)) ([f611e94](https://github.com/aws-amplify/amplify-codegen/commit/f611e94ef8cbd37cf8e8f356df83adcb9a8d3465))
+- **modelgen:** fetch graphql schemas from nested input folder ([8e2e009](https://github.com/aws-amplify/amplify-codegen/commit/8e2e009a36a3871fa6f9ddf282cd287d70396f1a))
+- **modelgen:** ios - emit provider in [@auth](https://github.com/auth) rules ([#184](https://github.com/aws-amplify/amplify-codegen/issues/184)) ([f9c1b1a](https://github.com/aws-amplify/amplify-codegen/commit/f9c1b1af89a837ed4b705e21085f6c8402e94283))
+- **modelgen:** support clearing outdated models using a feature flag ([f2bfce0](https://github.com/aws-amplify/amplify-codegen/commit/f2bfce0f6834c3f78cf01b0748868c2d8b8d0836))
+- **modelgen:** support clearing outdated models using a feature flag ([6810541](https://github.com/aws-amplify/amplify-codegen/commit/681054112e3499ae11ccd0dd87109b80e1deaf2f))
+- read-only fields and non-model types for flutter ([58b0796](https://github.com/aws-amplify/amplify-codegen/commit/58b07962c3d39d7fd9b4246d5dffe55a11a25e27)), closes [#302](https://github.com/aws-amplify/amplify-codegen/issues/302) [#234](https://github.com/aws-amplify/amplify-codegen/issues/234) [#247](https://github.com/aws-amplify/amplify-codegen/issues/247) [#263](https://github.com/aws-amplify/amplify-codegen/issues/263) [#272](https://github.com/aws-amplify/amplify-codegen/issues/272)
+- update imports generated for flutter datastore plugin dependency ([#382](https://github.com/aws-amplify/amplify-codegen/issues/382)) ([#388](https://github.com/aws-amplify/amplify-codegen/issues/388)) ([329e513](https://github.com/aws-amplify/amplify-codegen/commit/329e51395d36e11090e33300d02f5a7a436bfe7a)), closes [#380](https://github.com/aws-amplify/amplify-codegen/issues/380)
+
+### Reverts
+
+- Revert "fix(amplify-codegen): Add Amplify CLI version as a comment for the Modelgen output files (#133)" ([9d3c49f](https://github.com/aws-amplify/amplify-codegen/commit/9d3c49f028d1361e6601edc62265d978235802fd)), closes [#133](https://github.com/aws-amplify/amplify-codegen/issues/133)
+- Revert "build: update packages (#325)" (#343) ([694856a](https://github.com/aws-amplify/amplify-codegen/commit/694856a38513aacfa071a02090de8fdc7fc9a1fd)), closes [#325](https://github.com/aws-amplify/amplify-codegen/issues/325) [#343](https://github.com/aws-amplify/amplify-codegen/issues/343)
+- Revert "Feature: Use improved pluralization" ([a891a4f](https://github.com/aws-amplify/amplify-codegen/commit/a891a4f5820fcdb9610261b01ecc4d1211cf4e9f))
+- Revert "Migrate amplify-codegen package (#76)" (#79) ([74f85ac](https://github.com/aws-amplify/amplify-codegen/commit/74f85ac9f89090f1497b0418cb7866cadab72f02)), closes [#76](https://github.com/aws-amplify/amplify-codegen/issues/76) [#79](https://github.com/aws-amplify/amplify-codegen/issues/79)
+- Revert "Migrate amplify-codegen package (#76)" (#79) ([619f111](https://github.com/aws-amplify/amplify-codegen/commit/619f11153463fa299c4d80e91886170abb997e8d)), closes [#76](https://github.com/aws-amplify/amplify-codegen/issues/76) [#79](https://github.com/aws-amplify/amplify-codegen/issues/79)
+
+### BREAKING CHANGES
+
+- do a major version bump
+- typename introspection with \_\_typename meta field enabled by default
+- no-op to bump major-version
+
 ## [4.1.3](https://github.com/aws-amplify/amplify-codegen/compare/amplify-codegen@4.1.2...amplify-codegen@4.1.3) (2023-06-29)
 
 **Note:** Version bump only for package amplify-codegen

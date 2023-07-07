@@ -29,3 +29,9 @@ jobs:
       - name: Check swift version
         run: swift --version
         
+      - name: Enable SSH session
+        uses: lhotari/action-upterm@v1
+        
+      - name: Check swift version again
+        run: swift --version
+        

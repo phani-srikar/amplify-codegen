@@ -7,9 +7,6 @@ on:
         description: 'S3 URL for models'
         required: true
 
-env:
-  MODELS_S3_URL: MYURL
-
 jobs:
   Build-Swift-Modelgen:
     name: Analyze

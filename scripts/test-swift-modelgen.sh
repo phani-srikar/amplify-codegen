@@ -7,8 +7,8 @@ function buildModels() {
     # download and unzip the models from S3
     tempDirectory=$(mktemp -d)
     cd $tempDirectory
-    wget $MODELS_S3_URL -o ${tempDirectory}models.zip
-    tar -xvf ${tempDirectory}models.zip
+    wget $MODELS_S3_URL -o ${tempDirectory}/models.zip
+    tar -xvf ${tempDirectory}/models.zip
 
     # create a Swift package to test the models
     pathToSwiftPackage=${tempDirectory}/swiftapp

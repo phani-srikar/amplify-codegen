@@ -33,7 +33,9 @@ function buildAndRunModel() {
 
     pathToSwiftPackage=$2
 
-    # copy with replace all files in current directory to the swift package 
+    # copy with replace all files in current directory to the swift package
+    mkdir -p $pathToSwiftPackage/Sources/models
+    rm -rf $pathToSwiftPackage/Sources/models/*
     cp -r $currentDirectory/* $pathToSwiftPackage/Sources/models
 
     # build and run the model

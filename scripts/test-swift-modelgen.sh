@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# set exit on error to true
+set -e
+
 function buildModels() {
     # download and unzip the models from S3
     tempDirectory=$(mktemp -d)
@@ -46,7 +49,7 @@ function createSwiftPackage() {
     # create a swift package
     swift package init --type executable
     rm -rf Package.swift
-    echo '// swift-tools-version: 5.8
+    echo '// swift-tools-version: 5.7
     import PackageDescription
     let package = Package(name: "swiftapp", platforms: [.macOS(.v10_15)], dependencies: [.package(url: "https://github.com/aws-amplify/amplify-swift", from: "2.12.0")   ], targets: [ .executableTarget( name: "swiftapp",  dependencies: [ .product(name: "Amplify", package: "amplify-swift") ], path: "Sources")]
     )' >> Package.swift

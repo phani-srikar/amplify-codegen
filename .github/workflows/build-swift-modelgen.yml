@@ -7,8 +7,8 @@ on:
         description: 'S3 URL for models'
         required: true
 
-env:
-  MODELS_S3_URL: ${{ inputs.MODELS_S3_URL }}
+# env:
+#   MODELS_S3_URL: ${{ inputs.MODELS_S3_URL }}
 
 jobs:
   Build-Swift-Modelgen:
@@ -22,9 +22,9 @@ jobs:
       fail-fast: true
 
     steps:
-      - name: Mask S3 URL
-        run: |
-          echo "::add-mask::$MODELS_S3_URL"
+      # - name: Mask S3 URL
+      #   run: |
+      #     echo "::add-mask::$MODELS_S3_URL"
 
       - name: Checkout repository
         uses: actions/checkout@v3

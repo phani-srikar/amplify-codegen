@@ -27,9 +27,10 @@ jobs:
           xcodebuild -version
           swift --version
 
+      - name: Mask S3 URL
+        run: echo "::add-mask::${{ inputs.MODELS_S3_URL }}"
+
       - name: Build Swift Models
         env:
           MODELS_S3_URL: ${{ inputs.MODELS_S3_URL }}
-        run: |
-          echo "::add-mask::$MODELS_S3_URL" 
-          ./scripts/test-swift-modelgen.sh
+        run: ./scripts/test-swift-modelgen.sh

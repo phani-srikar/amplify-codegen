@@ -1,6 +1,11 @@
 name: 'Test compiling Swift Modelgen output'
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      MODELS_S3_URL:
+        description: 'S3 URL for models'
+        required: true
 
 env:
   MODELS_S3_URL: MYURL
@@ -33,4 +38,6 @@ jobs:
         run: pwd
 
       - name: Build Swift Models
+        env:
+          MODELS_S3_URL: ${{ inputs.MODELS_S3_URL }}
         run: ./scripts/test-swift-modelgen.sh

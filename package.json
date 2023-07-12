@@ -56,8 +56,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "npm run lint && npm run test-changed",
-      "pre-commit": "yarn split-codebuild-e2e-tests"
+      "pre-push": "npm run lint && npm run test-changed"
     }
   },
   "author": "Amazon Web Services",

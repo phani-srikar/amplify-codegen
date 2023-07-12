@@ -6,10 +6,10 @@ env:
 batch:
   fast-fail: false
   build-graph:
-    # - identifier: build_linux
-    #   buildspec: .codebuild/build_linux.yml
-    #   env:
-    #     compute-type: BUILD_GENERAL1_LARGE
+    - identifier: build_linux
+      buildspec: .codebuild/build_linux.yml
+      env:
+        compute-type: BUILD_GENERAL1_LARGE
     # - identifier: test
     #   buildspec: .codebuild/test.yml
     #   env:
@@ -26,8 +26,8 @@ batch:
       buildspec: .codebuild/publish_to_local_registry.yml
       env:
         compute-type: BUILD_GENERAL1_MEDIUM
-      # depend-on:
-      #   - build_linux
+      depend-on:
+        - build_linux
     - identifier: >-
         add_codegen_ios_configure_codegen_android_configure_codegen_js_graphql_codegen_android
       buildspec: .codebuild/run_e2e_tests.yml

@@ -104,14 +104,14 @@ batch:
     #   depend-on:
     #     - publish_to_local_registry
     # - identifier: build_app_ts
-      buildspec: .codebuild/run_e2e_tests.yml
-      env:
-        compute-type: BUILD_GENERAL1_LARGE
-        variables:
-          TEST_SUITE: src/__tests__/build-app-ts.test.ts
-          CLI_REGION: ap-southeast-1
-      depend-on:
-        - publish_to_local_registry
+      # buildspec: .codebuild/run_e2e_tests.yml
+      # env:
+      #   compute-type: BUILD_GENERAL1_LARGE
+      #   variables:
+      #     TEST_SUITE: src/__tests__/build-app-ts.test.ts
+      #     CLI_REGION: ap-southeast-1
+      # depend-on:
+      #   - publish_to_local_registry
     - identifier: cleanup_e2e_resources
       buildspec: .codebuild/cleanup_e2e_resources.yml
       env:

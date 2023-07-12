@@ -165,7 +165,7 @@ const splitTests = (
         tmp.env.variables.USE_PARENT_ACCOUNT = 1;
       }
       if (j.runSolo) {
-        tmp.env['compute-type'] = 'BUILD_GENERAL1_SMALL';
+        tmp.env['compute-type'] = 'BUILD_GENERAL1_MEDIUM';
       }
       result.push(tmp);
     }
@@ -180,7 +180,7 @@ function main(): void {
       identifier: 'run_e2e_tests',
       buildspec: '.codebuild/run_e2e_tests.yml',
       env: {
-        'compute-type': 'BUILD_GENERAL1_MEDIUM',
+        'compute-type': 'BUILD_GENERAL1_LARGE',
       },
       'depend-on': ['publish_to_local_registry'],
     },
@@ -193,7 +193,7 @@ function main(): void {
     identifier: 'cleanup_e2e_resources',
     buildspec: '.codebuild/cleanup_e2e_resources.yml',
     env: {
-      'compute-type': 'BUILD_GENERAL1_SMALL'
+      'compute-type': 'BUILD_GENERAL1_MEDIUM'
     },
     'depend-on': [allBuilds[0].identifier]
   }

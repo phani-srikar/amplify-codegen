@@ -35,7 +35,7 @@ describe('Model Introspection Codegen test', () => {
       await addApiWithoutSchema(projectRoot, { apiName });
       await updateApiSchema(projectRoot, apiName, schema);
       //generate introspection schema
-      await expect(generateModelIntrospectionWithError(projectRoot, 'Expected --output-dir flag to be set')).rejects.toThrowError();
+      await generateModelIntrospectionWithError(projectRoot, 'Expected --output-dir flag to be set');
     });
 
     it('should throw error if the GraphQL schema is invalid', async () => {
@@ -46,7 +46,7 @@ describe('Model Introspection Codegen test', () => {
       await updateApiSchema(projectRoot, apiName, invalidSchema);
       const outputDir = 'output';
       //generate introspection schema
-      await expect(generateModelIntrospectionWithError(projectRoot, 'Unknown type', { outputDir })).rejects.toThrowError();
+      await generateModelIntrospectionWithError(projectRoot, 'Unknown type', { outputDir });
     });
 
     it(`should handle a schema with connected PK`, async () => {

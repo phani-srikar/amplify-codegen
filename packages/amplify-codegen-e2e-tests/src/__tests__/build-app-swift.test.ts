@@ -30,7 +30,6 @@ describe('build app - Swift', () => {
   });
 
   afterEach(async () => {
-    await rmSync(path.join(projectRoot, 'amplify', 'generated', 'models'), { recursive: true, force: true });
     writeFileSync(path.join(projectRoot, 'swift.xcodeproj', 'project.pbxproj'), projectPBXProjCache);
   });
 
@@ -46,7 +45,6 @@ describe('build app - Swift', () => {
       console.log(schemaText); // log so that circleci does not timeout
       updateApiSchemaWithText(projectRoot, 'amplifyDatasource', schemaText);
       await generateModels(projectRoot, outputDir);
-      await listFiles(outputDir);
     };
     if (skip.has(schemaName)) {
       it.skip(testName, testFunction);
@@ -55,16 +53,3 @@ describe('build app - Swift', () => {
     }
   });
 });
-
-const listFiles = (dir: string) => {
-  const files = readdirSync(dir);
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = statSync(filePath);
-    if (stat.isDirectory()) {
-      listFiles(filePath);
-    } else {
-      console.log(filePath);
-    }
-  });
-};

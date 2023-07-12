@@ -12,10 +12,10 @@ phases:
     commands:
       # you can provide a codebuild source version to use old cache and skip all other jobs :)
       - source ./shared-scripts.sh && _runE2ETestsLinux
-      - export PATH_TO_MODELS=$CODEBUILD_SRC_DIR/packages/amplify-codegen-e2e-tests/test-apps/swift/amplify/generated/models
-      - cd $PATH_TO_MODELS && cd .. && zip -r models.zip models
-      - aws s3 cp s3://$ARTIFACT_BUCKET_NAME $PATH_TO_MODELS/models.zip
-      - aws s3 presign s3://$ARTIFACT_BUCKET_NAME/models.zip --expires-in 604800
+      - export PATH_TO_MODELS=$CODEBUILD_SRC_DIR/packages/amplify-codegen-e2e-tests/test-apps/swift/amplify/generated
+      - cd $PATH_TO_MODELS && zip -r models.zip models
+      - aws s3 cp $PATH_TO_MODELS/models.zip s3://$ARTIFACT_BUCKET_NAME/models.zip
+      - aws s3 presign s3://$ARTIFACT_BUCKET_NAME/models.zip --expires-in 3600
   post_build:
     commands:
       - aws sts get-caller-identity

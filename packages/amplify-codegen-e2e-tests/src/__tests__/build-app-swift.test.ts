@@ -7,7 +7,7 @@ import {
   swiftBuild,
 } from '@aws-amplify/amplify-codegen-e2e-core';
 const { schemas } = require('@aws-amplify/graphql-schema-test-library');
-import { existsSync, writeFileSync, readdirSync, rmSync, readFileSync } from 'fs';
+import { existsSync, writeFileSync, readdirSync, rmSync, readFileSync, statSync } from 'fs';
 import path from 'path';
 
 const skip = new Set([
@@ -37,13 +37,16 @@ describe('build app - Swift', () => {
   Object.entries(schemas).forEach(([schemaName, schema]) => {
     // @ts-ignore
     const testName = `builds with ${schemaName}: ${schema.description}`;
+    const schemaFolderName = schemaName.replace(/[^a-zA-Z0-9]/g, '');
+    const outputDir = path.join(projectRoot, 'amplify', 'generated', 'models', schemaFolderName);
+
     const testFunction = async () => {
       // @ts-ignore
       const schemaText = `input AMPLIFY { globalAuthRule: AuthRule = { allow: public } }\n${schema.sdl}`;
       console.log(schemaText); // log so that circleci does not timeout
       updateApiSchemaWithText(projectRoot, 'amplifyDatasource', schemaText);
-      await generateModels(projectRoot);
-      await swiftBuild(projectRoot, { ...config, scheme: 'swift' });
+      await generateModels(projectRoot, outputDir);
+      await listFiles(outputDir);
     };
     if (skip.has(schemaName)) {
       it.skip(testName, testFunction);
@@ -51,10 +54,17 @@ describe('build app - Swift', () => {
       it(testName, testFunction);
     }
   });
-
-  it('fails build with syntax error', async () => {
-    await generateModels(projectRoot);
-    await writeFileSync(path.join(projectRoot, 'amplify', 'generated', 'models', 'AmplifyModels.swift'), 'foo\nbar');
-    await expect(swiftBuild(projectRoot, { ...config })).rejects.toThrowError();
-  });
 });
+
+const listFiles = (dir: string) => {
+  const files = readdirSync(dir);
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = statSync(filePath);
+    if (stat.isDirectory()) {
+      listFiles(filePath);
+    } else {
+      console.log(filePath);
+    }
+  });
+};

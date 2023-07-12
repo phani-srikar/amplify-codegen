@@ -4,7 +4,7 @@ source ./scripts/cloud-utils.sh
 
 function downloadS3Artifact {
   # Get temporary access for the account
-  E2E_ROLE_NAME=CodebuildDeveloper
+  E2E_ROLE_NAME=admin
   E2E_PROFILE_NAME=AmplifyAPIE2EProd
   authenticate $E2E_ACCOUNT_PROD $E2E_ROLE_NAME "$E2E_PROFILE_NAME"
 

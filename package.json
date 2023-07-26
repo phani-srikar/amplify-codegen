@@ -1,7 +1,7 @@
 {
   "name": "amplify-codegen",
   "version": "0.1.0",
-  "description": "amplify-codegen",
+  "description": "amplify-codegen repo",
   "scripts": {
     "test-changed": "lerna run test --since main",
     "test": "lerna run test",
